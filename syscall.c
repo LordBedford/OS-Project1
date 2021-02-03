@@ -8,12 +8,23 @@
  *
  */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>                                                                                
 #include <sys/syscall.h>
 
 double avg_time = 0;
+
+void syscall_benchmark(){
+    int num_of_calls = 3000;
+    struct timeval current_time;
+    gettimeofday(&current_time, NULL);
+    printf("%ld", current_time.tv_usec);
+    syscall(0);
+    
+}
 
 int main(int argc, char *argv[]) {
 
@@ -23,6 +34,6 @@ int main(int argc, char *argv[]) {
     // per system call into the avg_time variable
 
     printf("Average time per system call is %f microseconds\n", avg_time);
-
+    syscall_benchmark();
     return 0;
 }
