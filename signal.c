@@ -10,6 +10,8 @@ void segment_fault_handler(int signum) {
 
     printf("I am slain!\n");
 
+    printf("%p\n", &signum);
+    //(signum) = (&signum) + 0xffffd5d0 + 0x8;
 
     /* Implement Code Here */
 
@@ -27,5 +29,5 @@ int main(int argc, char *argv[]) {
 
     printf("I live again!\n");
 
-    return ;
+    return 0;
 }
