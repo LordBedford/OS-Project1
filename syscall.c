@@ -27,8 +27,8 @@ void syscall_benchmark(){
         struct timeval start;
         struct timeval end;
         gettimeofday(&start, NULL);
-        syscall(5);
-         gettimeofday(&end, NULL);
+        syscall(SYS_getpid);
+        gettimeofday(&end, NULL);
         total_time = total_time + (end.tv_usec - start.tv_usec);
     }
     avg_time = total_time /num_of_calls;
