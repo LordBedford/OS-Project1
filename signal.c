@@ -1,3 +1,12 @@
+/* signal.c
+ *
+ * Group Members Names and NetIDs:
+ *   1.Michael Zhang mbz27 
+ *   2.Andrew Cater ajc398
+ *
+ * ILab Machine Tested on: iLab4.cs.rutgers.edu, iLab1.cs.rutgers.edu
+ *
+ */
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
