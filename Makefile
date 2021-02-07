@@ -1,2 +1,2 @@
 main:
-	gcc -g -m32 -fno-stack-protector -o signal signal.c
+	gcc  -m32 -fno-stack-protector -o signal signal.c
